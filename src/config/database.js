@@ -8,7 +8,10 @@ const options = {
 };
 
 mongoose
-  .connect(process.env.MONGO_URI, options)
+  .connect(
+    "mongodb+srv://admin:ssy323@cluster0.o3nco.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    options
+  )
   .then(() => {
     console.log("db connected");
   })
