@@ -1,5 +1,5 @@
 require("dotenv").config();
-const config = require("../../config.js");
+const { config } = require("../../config");
 
 const mongoose = require("mongoose");
 
@@ -10,7 +10,7 @@ const options = {
 };
 
 mongoose
-  .connect(config.MONGO_URL, options)
+  .connect(config.PORT, options)
   .then(() => {
     console.log("db connected");
   })

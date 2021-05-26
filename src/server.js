@@ -4,7 +4,7 @@ const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser"); //request, response json parser
 const Bcrypt = require("bcrypt");
-const config = require("../config.js");
+const { config } = require("../../config");
 
 const app = express();
 
