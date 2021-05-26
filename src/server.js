@@ -4,6 +4,7 @@ const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser"); //request, response json parser
 const Bcrypt = require("bcrypt");
+const config = require("../config");
 
 const app = express();
 
@@ -23,6 +24,6 @@ app.use(
 
 app.use("/todo", todoRoute);
 
-app.listen(process.env.PORT || 8000, () => {
-  console.log(`server started at ${process.env.PORT}`);
+app.listen(config.PORT || 8000, () => {
+  console.log(`server started at ${config.PORT}`);
 });

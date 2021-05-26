@@ -1,4 +1,5 @@
 require("dotenv").config();
+const config = require("../../config");
 
 const mongoose = require("mongoose");
 
@@ -9,7 +10,7 @@ const options = {
 };
 
 mongoose
-  .connect(process.env.MONGO_URI, options)
+  .connect(config.MONGO_URL, options)
   .then(() => {
     console.log("db connected");
   })
